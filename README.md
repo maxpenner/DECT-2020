@@ -15,7 +15,7 @@ The standard consists of four parts which can be found on the DECT Technical Com
 - lib/include/dect2020/utils: utility functions
 - lib/test/: various programs to test library
 
-The channel coding of DECT-2020 has similarities to LTE, which is why we utilize [srsRAN](https://github.com/srsRAN/srsRAN). Its functions for channel coding and decoding have been adapted accordingly.
+The channel coding of DECT-2020 has similarities to LTE, which is why we utilize [srsRAN](https://github.com/srsRAN/srsRAN). Its functions for channel coding and decoding have been adapted accordingly. The modules of srsRAN were also used for the creation of the project with cmake. CMakeLists.txt has been adapted accordingly.
 
 ## Results
 ### Channel Coding
