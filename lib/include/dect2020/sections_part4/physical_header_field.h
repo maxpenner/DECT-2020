@@ -73,13 +73,17 @@ typedef struct{
     uint8_t plcf[10];
 } plcf_21_t;
 
-int get_plcf_t(plcf_10_t& plcf_10);
-int get_plcf_t(plcf_20_t& plcf_20);
-int get_plcf_t(plcf_21_t& plcf_21);
+int get_plcf(plcf_10_t& plcf_10);
+int get_plcf(plcf_20_t& plcf_20);
+int get_plcf(plcf_21_t& plcf_21);
 
-int get_plcf_t_rev(plcf_10_t& plcf_10);
-int get_plcf_t_rev(plcf_20_t& plcf_20);
-int get_plcf_t_rev(plcf_21_t& plcf_21);
+int get_plcf_rev(plcf_10_t& plcf_10);
+int get_plcf_rev(plcf_20_t& plcf_20);
+int get_plcf_rev(plcf_21_t& plcf_21);
+
+uint8_t get_transmit_power(int32_t tx_power_dBm);
+
+uint8_t get_number_of_spatial_streams(int32_t N_SS);
 
 }
 

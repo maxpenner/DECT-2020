@@ -41,6 +41,7 @@ set(DECT2020_SOURCES
     ${CMAKE_SOURCE_DIR}/lib/src/sections_part3/transmission_packet_structure.cc
     ${CMAKE_SOURCE_DIR}/lib/src/sections_part3/transmit_diversity_precoding.cc
     ${CMAKE_SOURCE_DIR}/lib/src/sections_part3/transport_block_size.cc
+    ${CMAKE_SOURCE_DIR}/lib/src/sections_part4/feedback_info.cc
     ${CMAKE_SOURCE_DIR}/lib/src/sections_part4/physical_header_field.cc
     ${CMAKE_SOURCE_DIR}/lib/src/utils/debug.cc
     ${CMAKE_SOURCE_DIR}/lib/src/utils/math_functions.cc)
@@ -109,6 +110,15 @@ target_link_libraries(coding_tb_configurations
 
 add_executable(modulation modulation.cc)
 target_link_libraries(modulation
+                        srsran_phy
+                        dect2020
+                        #dect2020_mac
+                        dect2020_phy
+                        ${CMAKE_THREAD_LIBS_INIT}
+                        ${Boost_LIBRARIES})
+
+add_executable(pdu pdu.cc)
+target_link_libraries(pdu
                         srsran_phy
                         dect2020
                         #dect2020_mac

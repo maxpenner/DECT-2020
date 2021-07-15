@@ -33,7 +33,7 @@ static void fill_k_i(int* k_i, const int* k_b_OCC, int N_b_OCC){
 
 static void fill_y_STF_i(std::complex<float>* y_STF_i_b_x, int N_b_OCC, int N_eff_TX){
 
-    uint32_t log2_N_eff_TX;
+    uint32_t log2_N_eff_TX = 0;
     switch(N_eff_TX){
         case 1:
             log2_N_eff_TX = 0;

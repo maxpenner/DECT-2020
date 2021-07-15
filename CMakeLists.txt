@@ -583,5 +583,5 @@ add_custom_target(add_srsran_headers SOURCES ${HEADERS_ALL})
 # DECT2020 Project Specifics
 ########################################################################
 include_directories(${PROJECT_SOURCE_DIR}/lib/include)
-add_subdirectory(ft_pt)
+#add_subdirectory(ft_pt)
 add_subdirectory(lib)
